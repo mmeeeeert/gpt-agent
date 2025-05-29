@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: gpt-agent
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: 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
+        sync: false
